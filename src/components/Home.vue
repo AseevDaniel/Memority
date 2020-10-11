@@ -87,6 +87,7 @@ export default {
       border-radius: 8px;
       cursor: pointer;
       transition: .5s;
+      white-space: nowrap;
       &:hover{
         transform: translateX(-50%) scale(1.05);
       }

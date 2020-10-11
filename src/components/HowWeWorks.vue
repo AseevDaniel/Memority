@@ -1,4 +1,5 @@
 <template>
+<!-- <img class="bg" src="../assets/howWeWorks.svg" alt=""> -->
   <div class="howWeWorks">
     <h1>Успей защитить свои важные моменты от времени</h1>
   </div>

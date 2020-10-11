@@ -1,6 +1,15 @@
 <template>
   <div class="all">
     
+    <div class="right-nav">
+      <div class="line"></div>
+      <div class="circle active"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
     <Home class="section" id="home"></Home>
     <HowItWork class="section" id="howItWork"/>
     <PersonalPage class="section" id="personalPage"/>
@@ -41,13 +50,42 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import './css/variables.scss';
 *{
   margin: 0;
   outline: none;
   font-family: 'Montserrat', sans-serif;
 }
 .all{
-  
+  .right-nav{
+    position: fixed;
+    top: 50%;
+    right: 64px;
+    transform: translateY(-50%);
+    height: 20vh;
+    display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    .line{
+      position: absolute;
+      left: 50%;
+      height: 20vh;
+      width: 1px;
+      background: $color-white;
+      z-index: 99;
+    }
+    .circle{
+      width: 11px;
+      height: 11px;
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      z-index: 999;
+    }
+    .active{
+      border: 1px solid $color-orange;
+    }
+    
+  }
   #home{
     background-image: url(./assets/home.svg);
   }

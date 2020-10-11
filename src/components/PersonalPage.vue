@@ -11,6 +11,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.bg{
+
+}
 .personalPage{
   display: flex;
   justify-content: center;
