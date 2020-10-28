@@ -49,7 +49,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 @import './css/variables.scss';
 *{
   margin: 0;
@@ -64,8 +63,9 @@ export default {
     transform: translateY(-50%);
     height: 20vh;
     display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 9999;
     .line{
       position: absolute;
       left: 50%;
@@ -75,14 +75,16 @@ export default {
       z-index: 99;
     }
     .circle{
-      width: 11px;
-      height: 11px;
-      border: 1px solid $color-white;
+      width: 1vh;
+      height: 1vh;
+      // border: 1px solid $color-white;
+      background: $color-white;
       border-radius: 50%;
       z-index: 999;
     }
     .active{
-      border: 1px solid $color-orange;
+      // border: 1px solid $color-orange;
+      background: $color-orange;
     }
     
   }

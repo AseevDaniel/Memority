@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
 $color-white:  white;
 $color-orange:  #D1742E;
 $color-grey: #B2B2B2;
+
+h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21.1945px;
+    line-height: 26px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+}

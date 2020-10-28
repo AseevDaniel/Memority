@@ -1,4 +1,4 @@
-# memority
+# memor2
 
 ## Project setup
 ```
