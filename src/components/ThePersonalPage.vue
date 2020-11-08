@@ -10,7 +10,9 @@
 
    <base-button class="button" :title="'Просмотреть свою страницу'"></base-button>
 
-  <base-sidebar :section="3"></base-sidebar>
+  <base-sidebar 
+    @scroll-to="$emit('scroll-to', $event)" 
+    :section="3"/>
   </div>
 </template>
 
@@ -52,6 +54,9 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     bottom: 5%;
+    &:hover{
+      transform: translateX(-50%) scale(1.05);
+    }
   }
 }
 </style>

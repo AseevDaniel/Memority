@@ -2,11 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
-// const BaseButton = () => import ('./components/base/BaseButton.vue');
-// const BaseSidebar = () => import ('./components/base/BaseSidebar.vue');
-// import BaseButton from './components/base/BaseButton.vue'
-// import BaseSidebar from './components/base/BaseSidebar.vue'
-
+// export const eventBus = new Vue()
 
 const requireComponent = require.context(
   // Относительный путь до каталога компонентов

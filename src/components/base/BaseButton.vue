@@ -26,6 +26,7 @@ export default {
         background: $color-orange;
         border: none;
         border-radius: 8px;
+        min-width: 265px;
         cursor: pointer;
         transition: .5s;
         white-space: nowrap;

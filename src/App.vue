@@ -1,33 +1,57 @@
 <template>
   <div class="all">
     
-    <Home class="section" id="home"></Home>
-    <HowItWork class="section" id="howItWork"/>
-    <PersonalPage class="section" id="personalPage"/>
-    <HowWeWorks class="section" id="howWeWorks"/>
-    <Questions class="section" id="questions"/>
-    <Footer class="section" id="footer"/>
+    <Home 
+      @scroll-to="scrollTo" 
+      class="section" 
+      id="home"/>
+      
+    <HowItWork 
+      @scroll-to="scrollTo" 
+      class="section" 
+      id="howItWork"/>
+
+    <PersonalPage 
+      @scroll-to="scrollTo" 
+      class="section" 
+      id="personalPage"/>
+
+    <HowWeWorks 
+      @scroll-to="scrollTo" 
+      class="section" 
+      id="howWeWorks"/>
+
+    <Questions 
+      @scroll-to="scrollTo" 
+      class="section" 
+      id="questions"/>
+
+    <Footer 
+      @scroll-to="scrollTo" 
+      class="section" 
+      id="footer"/>
  
   </div>
 </template>
 
 <script>
-const Home = () => import ('./components/Home.vue')
-const Questions = () => import ('./components/Questions.vue')
-const PersonalPage = () => import ('./components/PersonalPage.vue')
-const HowWeWorks = () => import ('./components/HowWeWorks.vue')
-const HowItWork = () => import ('./components/HowItWork.vue')
-const Footer = () => import ('./components/Footer.vue')
-
 export default {
   name: 'App',
   components: {
-    Home,
-    Questions,
-    PersonalPage,
-    HowWeWorks,
-    HowItWork,
-    Footer
+    Home: () => import ('./components/TheHome.vue'),
+    Questions: () => import ('./components/TheQuestions.vue'),
+    PersonalPage: () => import ('./components/ThePersonalPage.vue'),
+    HowWeWorks: () => import ('./components/TheHowWeWorks.vue'),
+    HowItWork: () => import ('./components/TheHowItWork.vue'),
+    Footer: () => import ('./components/TheFooter.vue')
+  },
+  methods: {
+    scrollTo(i){
+      window.scrollTo({
+          top: window.innerHeight * i,
+          behavior: 'smooth'
+      });
+    }
   }
 }
 </script>

@@ -1,12 +1,12 @@
 <template>
     <div class="right-nav">
       <div class="line"></div>
-      <div :class="{active: section == 1}" class="circle"></div>
-      <div :class="{active: section == 2}" class="circle"></div>
-      <div :class="{active: section == 3}" class="circle"></div>
-      <div :class="{active: section == 4}" class="circle"></div>
-      <div :class="{active: section == 5}" class="circle"></div>
-      <div :class="{active: section == 6}" class="circle"></div>
+      <div @click="scrollTo(0)" :class="{active: section == 1}" class="circle"></div>
+      <div @click="scrollTo(1)" :class="{active: section == 2}" class="circle"></div>
+      <div @click="scrollTo(2)" :class="{active: section == 3}" class="circle"></div>
+      <div @click="scrollTo(3)" :class="{active: section == 4}" class="circle"></div>
+      <div @click="scrollTo(4)" :class="{active: section == 5}" class="circle"></div>
+      <div @click="scrollTo(5)" :class="{active: section == 6}" class="circle"></div>
     </div>
 </template>
 
@@ -22,6 +22,11 @@ export default {
           }
       }
   },
+  methods: {
+      scrollTo(i){
+          this.$emit('scroll-to', i)
+      }
+  }
 
 }
 </script>

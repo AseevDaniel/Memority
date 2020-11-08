@@ -1,27 +1,29 @@
 <template>
   <div class="home">
-    <div class="header">
-      <img src="../assets/logo.svg" alt="">
-      <ul class="menu">
-        <li>как это работает?</li>
-        <li>о нас</li>
-        <li>контакты</li>
-        <li>стать партнером</li>
-      </ul>
-    </div>
+    <base-navigation 
+      @scroll-to="$emit('scroll-to', $event)"/>
+
     <div class="center">
       <h1>Успей защитить свои важные моменты от времени</h1>
-      <base-button class="button" :title="'Стать участником клуба'"></base-button>
+      <base-button 
+        class="button" 
+        :title="'Стать участником клуба'"/>
     </div>
-    
 
-  <base-sidebar :section="1"></base-sidebar>
+  <base-sidebar
+    @scroll-to="$emit('scroll-to', $event)"
+    :section="1"/>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
+  // methods: {
+  //   scrollTo(i){
+  //     this.$emit('scroll-to', i)
+  //   }
+  // }
 }
 </script>
 

@@ -25,14 +25,21 @@
           :controls-width="30" 
           :controls-height="60" 
           :space="200">
-          <slide v-for="(slide, i) in slides" :index="i" :key="i">
+          <slide 
+            v-for="(slide, i) in slides" 
+            :index="i" 
+            :key="i">
             <figure>
               <img :src="require(`../assets/slider/slider${sliderMethod(i)}.svg`)">
             </figure>
           </slide>
         </carousel-3d>
       </div>
-  <base-sidebar class="button" :section="2"></base-sidebar>
+
+  <base-sidebar 
+    @scroll-to="$emit('scroll-to', $event)" 
+    class="button" 
+    :section="2"/>
   </div>
 </template>
 
@@ -79,7 +86,7 @@ export default {
     justify-content: space-between;
     height: 50%;
     margin: 0 auto;
-    width: 80vw;
+    width: 82vw;
 
     .content{
       width: 60%;
@@ -102,16 +109,18 @@ export default {
   .carousel{
     display: flex;
     height: 50%;
-    width: 100%;
+    padding: 0 50px;
+    width: calc(100% - 2 * 50px);
   }
   .gallery{
     position: absolute;
     left: 9vw;
-    bottom: 330px;
+    bottom: 300px;
     
   }
   .slider{
     align-self: flex-end;
+    
     img{
       cursor: pointer;
     }

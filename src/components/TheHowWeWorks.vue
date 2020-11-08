@@ -22,7 +22,10 @@
       </div>
     </div>
 
-  <base-sidebar class="button" :section="4"></base-sidebar>
+  <base-sidebar 
+    @scroll-to="$emit('scroll-to', $event)" 
+    class="button" 
+    :section="4"/>
   </div>
 </template>
 
