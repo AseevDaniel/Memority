@@ -43,6 +43,7 @@ export default {
             left: 50%;
             height: 20vh;
             width: 1px;
+            transform: translateX(-1px);
             background: $color-white;
             z-index: 99;
         }

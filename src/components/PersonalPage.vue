@@ -29,30 +29,29 @@ export default {
   position: relative;
   .top{
     position: absolute;
-    top: 10vh;
+    top: 8vh;
     right: 8vw;
     text-align: right;
-    width: 35vw;
+    width: 40vw;
     h1{
-      color: $color-orange;
-      padding-bottom: 25px;
+      padding-bottom: 20px;
     }
     p{
       text-align: left;
-      color: $color-white;
     }
   }
   .main-img{
     position: absolute;
+    width: 80vw;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -50%);
   }
   .button{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10%;
+    bottom: 5%;
   }
 }
 </style>

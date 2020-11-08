@@ -63,18 +63,15 @@ export default {
 @import '../css/variables.scss';
 .howWeWorks{
   position: relative;
-  h1{
-    color: $color-orange;
-  }
-  p{
-    color: $color-white;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .top{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 125px;
-    padding-top: 100px;
+    padding-top: 7vh;
     .text{
       width: 35%;
       h1{
@@ -82,8 +79,8 @@ export default {
       }
     }
     .video{
-      min-width: 640px;
-      min-height: 320px;
+      width: 500px;
+      height: 250px;
     }
   }
   .bot{
@@ -95,14 +92,15 @@ export default {
       padding: 20px;
       display: flex;
       flex-direction: column;
+      align-items: center;
       img{
-
+        width: 25vh;
       }
       p{
         margin-top: 15px;
         text-align: center;
         max-width: 240px;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

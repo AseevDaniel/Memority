@@ -24,7 +24,7 @@
           :controls-next-html="'&#10093;'" 
           :controls-width="30" 
           :controls-height="60" 
-          :space="(width/6) + 100">
+          :space="200">
           <slide v-for="(slide, i) in slides" :index="i" :key="i">
             <figure>
               <img :src="require(`../assets/slider/slider${sliderMethod(i)}.svg`)">
@@ -74,9 +74,6 @@ export default {
   // align-items: center;
   max-width: 100vw;
   position: relative;
-  h1{
-    color: $color-orange;
-  }
   .top{
     display: flex;
     justify-content: space-between;
@@ -85,19 +82,20 @@ export default {
     width: 80vw;
 
     .content{
-      width: 45%;
+      width: 60%;
       h1{
-        margin-top: 12vh;
+        margin-top: 10vh;
         margin-bottom: 6vh;
       }
       p{
-        color: $color-white;
+        font-size: 14px;
       }
     }
     // padding: 0 100px;
     img{
+      width: 45%;
       align-self: flex-end;
-      transform: translate(-4vw, 6vh) ;
+      transform: translateY(2vh) ;
       // scale(1.1)
     }
   }
