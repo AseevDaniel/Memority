@@ -11,19 +11,17 @@
     </div>
     <div class="center">
       <h1>Успей защитить свои важные моменты от времени</h1>
-      <button>Стать участником клуба</button>
+      <base-button class="button" :title="'Стать участником клуба'"></base-button>
     </div>
     
 
+  <base-sidebar :section="1"></base-sidebar>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  props: {
-    msg: String
-  }
 }
 </script>
 
@@ -62,7 +60,6 @@ export default {
     transform: translate(-50%, -50%);
     h1{
       max-width: 34vw;
-      
       font-weight: 600;
       text-transform: uppercase;
       font-size: 22px;
@@ -70,24 +67,11 @@ export default {
       letter-spacing: 5px;
       color: white;
       text-align: center;
-
       margin-bottom: 60px;
-      
     }
-    button{
+    .button{
       margin-left: 50%;
       transform: translateX(-50%);
-      // width: 20vw;
-      padding: 15px 30px;
-      text-transform: uppercase;
-      // height: 5vh;
-      font-weight: 600;
-      background: $color-orange;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: .5s;
-      white-space: nowrap;
       &:hover{
         transform: translateX(-50%) scale(1.05);
       }

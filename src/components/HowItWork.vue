@@ -32,6 +32,7 @@
           </slide>
         </carousel-3d>
       </div>
+  <base-sidebar class="button" :section="2"></base-sidebar>
   </div>
 </template>
 

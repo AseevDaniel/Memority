@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../css/variables.scss';
 .footer{
   display: flex;
   justify-content: center;
