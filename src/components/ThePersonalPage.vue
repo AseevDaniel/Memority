@@ -9,10 +9,6 @@
    <img src="../assets/personalpage/personalPage.svg" alt="" class="main-img">
 
    <base-button class="button" :title="'Просмотреть свою страницу'"></base-button>
-
-  <base-sidebar 
-    @scroll-to="$emit('scroll-to', $event)" 
-    :section="3"/>
   </div>
 </template>
 

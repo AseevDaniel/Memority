@@ -1,26 +1,38 @@
 <template>
     <div class="right-nav">
-      <div class="line"></div>
-      <div @click="scrollTo(0)" :class="{active: section == 1}" class="circle"></div>
-      <div @click="scrollTo(1)" :class="{active: section == 2}" class="circle"></div>
-      <div @click="scrollTo(2)" :class="{active: section == 3}" class="circle"></div>
-      <div @click="scrollTo(3)" :class="{active: section == 4}" class="circle"></div>
-      <div @click="scrollTo(4)" :class="{active: section == 5}" class="circle"></div>
-      <div @click="scrollTo(5)" :class="{active: section == 6}" class="circle"></div>
+        <div class="line"></div>
+        
+         <div 
+            v-for="(menu, i) in menus" 
+            :key="i" 
+            @click="scrollTo(i)" 
+            :class="{active: section == ++i}" 
+            class="circle">
+        </div>
+     
     </div>
 </template>
 
 <script>
 export default {
   name: 'BaseSidebar',
-  props:{
-      section: {
-          type: Number,
-          required: true,
-          validator: value => {
-              return !!value
-          }
+  data:() => {
+      return{
+          section: 1,
+          menus: 6
       }
+  },
+  mounted(){
+       window.addEventListener('scroll', () => {
+           console.log(window.pageYOffset/window.innerHeight)
+            let scroll = (window.pageYOffset/window.innerHeight) + 0.5
+            scroll < 1 && (this.section = 1)
+            scroll > 1 && scroll < 2 && (this.section = 2)
+            scroll > 2 && scroll < 3 && (this.section = 3)
+            scroll > 3 && scroll < 4 && (this.section = 4)
+            scroll > 4 && scroll < 5 && (this.section = 5)
+            scroll > 5 && (this.section = 6)
+       })
   },
   methods: {
       scrollTo(i){
@@ -34,7 +46,7 @@ export default {
 <style scoped lang="scss">
 @import '../../css/variables.scss';
     .right-nav{
-        position: absolute;
+        position: fixed;
         top: 50%;
         right: 64px;
         transform: translateY(-50%);

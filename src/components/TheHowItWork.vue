@@ -35,11 +35,6 @@
           </slide>
         </carousel-3d>
       </div>
-
-  <base-sidebar 
-    @scroll-to="$emit('scroll-to', $event)" 
-    class="button" 
-    :section="2"/>
   </div>
 </template>
 

@@ -13,11 +13,6 @@
     <base-navigation 
       @scroll-to="$emit('scroll-to', $event)"
       class="bot"/>
-
-  <base-sidebar 
-    @scroll-to="$emit('scroll-to', $event)" 
-    class="button" 
-    :section="6"/>
   </div>
 </template>
 
