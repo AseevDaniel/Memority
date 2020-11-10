@@ -1,12 +1,12 @@
 <template>
     <div class="right-nav">
         <div class="line"></div>
-        
+
          <div 
             v-for="(menu, i) in menus" 
             :key="i" 
             @click="scrollTo(i)" 
-            :class="{active: section == ++i}" 
+            :class="{active: section == i + 1}" 
             class="circle">
         </div>
      
