@@ -31,6 +31,10 @@
       class="section" 
       id="footer"/>
  
+    <base-sidebar 
+      @scroll-to="scrollTo" 
+      class="button" 
+      :section="6"/>
   </div>
 </template>
 
@@ -88,6 +92,9 @@ export default {
     background-size: cover;
     background-color: black;
   }
+  // .button{
+  //   position: fixed;
+  // }
 }
 
 </style>

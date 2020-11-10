@@ -9,21 +9,12 @@
         class="button" 
         :title="'Стать участником клуба'"/>
     </div>
-
-  <base-sidebar
-    @scroll-to="$emit('scroll-to', $event)"
-    :section="1"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
-  // methods: {
-  //   scrollTo(i){
-  //     this.$emit('scroll-to', i)
-  //   }
-  // }
+  name: 'Home'
 }
 </script>
 
@@ -34,9 +25,6 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 45px 100px;
-    img{
-
-    }
     .menu{
       display: flex;
       align-items: center;

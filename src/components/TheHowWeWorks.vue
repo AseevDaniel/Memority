@@ -21,11 +21,6 @@
       <p>{{item.text}}</p>
       </div>
     </div>
-
-  <base-sidebar 
-    @scroll-to="$emit('scroll-to', $event)" 
-    class="button" 
-    :section="4"/>
   </div>
 </template>
 
