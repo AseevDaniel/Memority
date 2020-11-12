@@ -42,12 +42,12 @@
 export default {
   name: 'App',
   components: {
-    Home: () => import ('./components/TheHome.vue'),
-    Questions: () => import ('./components/TheQuestions.vue'),
-    PersonalPage: () => import ('./components/ThePersonalPage.vue'),
-    HowWeWorks: () => import ('./components/TheHowWeWorks.vue'),
-    HowItWork: () => import ('./components/TheHowItWork.vue'),
-    Footer: () => import ('./components/TheFooter.vue')
+    Home: () => import ('./views/TheHome.vue'),
+    Questions: () => import ('./views/TheQuestions.vue'),
+    PersonalPage: () => import ('./views/ThePersonalPage.vue'),
+    HowWeWorks: () => import ('./views/TheHowWeWorks.vue'),
+    HowItWork: () => import ('./views/TheHowItWork.vue'),
+    Footer: () => import ('./views/TheFooter.vue')
   },
   methods: {
     scrollTo(i){
@@ -92,9 +92,6 @@ export default {
     background-size: cover;
     background-color: black;
   }
-  // .button{
-  //   position: fixed;
-  // }
 }
 
 </style>
