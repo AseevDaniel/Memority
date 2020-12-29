@@ -68,6 +68,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 .all{
+  overflow: hidden;
   #home{
     background-image: url(./assets/home.svg);
   }
